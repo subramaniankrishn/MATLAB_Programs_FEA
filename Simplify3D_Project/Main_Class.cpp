@@ -231,6 +231,8 @@ int isElementFlipped(Element parent, Element child)
 
 
     int isFlipped = 1;//if mathDotProduct(parent_normal, child_normal) == -1 conclude child is flipped. Else it is aligned to parent.
+						//There also exists the case where the angle between the 2 normals can be greater than 160 degrees.
+						//A small leeway can be given to check for flip.
     return isFlipped;
 }
 
